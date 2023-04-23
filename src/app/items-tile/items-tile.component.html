@@ -1,0 +1,14 @@
+<div class="container">
+    <mat-card [style.margin]="'20px'" *ngFor="let kvp of map | keyvalue">
+
+        <mat-card-content [style.textAlign]="'center'">
+            <button type="button" (click)="onTileClick(kvp.value[0].name)" class="tile-button"
+                [style.background-color]="kvp.value[0].color" mat-button></button>
+
+        </mat-card-content>
+
+        <mat-card-footer class="footer">
+            {{kvp.value[0].name}}
+        </mat-card-footer>
+    </mat-card>
+</div>

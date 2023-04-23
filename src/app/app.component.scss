@@ -1,0 +1,43 @@
+.container {
+  padding: 50px;
+  width: 100%;
+}
+
+.sidenav-content {
+
+  padding: 80px;
+  background: #F2F6F9 0% 0% no-repeat padding-box;
+}
+
+.sidenav {
+  padding: 20px;
+  width: 30%;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mat-drawer-content {
+  width: 50%;
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  color: #0e4f6e
+}
+
+.mat-table {
+  border-collapse: separate !important;
+  border-spacing: 0 4px !important;
+}
+
+.mat-icon {
+  margin-right: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,20 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side" position="end">
+        <ta9-item-form (toggleDrawer)="drawer.toggle()"></ta9-item-form>
+    </mat-drawer>
+    <div class="sidenav-content">
+        <div class="top-bar">
+            <div class="title">
+                Management Tool
+            </div>
+            <div class="icons">
+                <mat-icon [svgIcon]="'tile'" (click)="onTileViewClick()" aria-hidden="false"></mat-icon>
+                <mat-icon [svgIcon]="'list'" (click)="onListViewClick()" aria-hidden="false"></mat-icon>
+                <mat-icon [svgIcon]="'new'" (click)="drawer.toggle()" aria-hidden="false"></mat-icon>
+            </div>
+
+        </div>
+        <ta9-items-table [subset]="subset" *ngIf="listView" (toggleDrawer)="drawer.toggle()"></ta9-items-table>
+        <ta9-items-tile (onTileSelected)="onTileSelected($event)" *ngIf="!listView"></ta9-items-tile>
+    </div>
+</mat-drawer-container>

@@ -1,0 +1,54 @@
+<div class="top-bar">
+  <div class="title">
+    Create new
+  </div>
+  <div class="close">
+    <mat-icon (click)="onCancelClick()" [svgIcon]="'close'" aria-hidden="false"></mat-icon>
+  </div>
+
+</div>
+
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+
+  <div class="container">
+    <div class="name">
+      <mat-label>Name</mat-label>
+
+      <mat-form-field appearance="outline">
+        <input required matInput formControlName="name">
+      </mat-form-field>
+    </div>
+
+    <div class="color shadow-6">
+      <mat-label>Color</mat-label>
+
+      <mat-form-field appearance="outline">
+        <input [style.cursor]="'pointer'" matInput type="color" formControlName="color">
+      </mat-form-field>
+    </div>
+
+  </div>
+
+  <div class="desc">
+    <mat-label>Tag Description</mat-label>
+
+    <mat-form-field required appearance="outline">
+      <textarea required matInput formControlName="description"></textarea>
+    </mat-form-field>
+  </div>
+
+
+
+  <div class="buttons">
+    <div>
+      <button type="button" (click)="onCancelClick()" mat-stroked-button>Cancel</button>
+    </div>
+    <div>
+      <button type="submit" mat-button extended style="background-color:green;color:white">
+        <mat-icon>save</mat-icon>
+        Save
+      </button>
+    </div>
+
+  </div>
+</form>
